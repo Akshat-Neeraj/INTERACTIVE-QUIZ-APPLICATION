@@ -1,4 +1,4 @@
-body {
+ body {
             background-color: #1e2328; 
             margin: 0;
             padding: 0;
@@ -52,30 +52,27 @@ body {
             margin-bottom: 40px;
         }
         
-        /* Styles each category card (e.g., Science, History) in the selection grid */
-.category-card {
-    background-color: var(--card-bg);     /* Uses the card background color variable for a dark card look */
-    border-radius: 10px;                  /* Rounds the corners of the card */
-    padding: 20px;                        /* Adds space inside the card */
-    text-align: center;                   /* Centers the text horizontally */
-    cursor: pointer;                      /* Shows a pointer cursor to indicate it's clickable */
-    transition: all 0.3s;                 /* Smoothly animates changes (like hover effects) */
-    border: 2px solid transparent;        /* Transparent border by default, visible on hover */
-}
-
-/* Adds a hover effect to category cards for interactivity */
-.category-card:hover {
-    transform: translateY(-5px);          /* Moves the card up slightly when hovered */
-    border-color: var(--accent);          /* Changes the border color to the accent color (orange) */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Adds a soft shadow for a "lifted" effect */
-}
-
-/* Styles the icon inside each category card */
-.category-icon {
-    font-size: 2.5rem;                    /* Makes the icon large */
-    color: var(--accent);                  /* Uses the accent color (orange) for the icon */
-    margin-bottom: 15px;                  /* Adds space below the icon */
-}
+        .category-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .category-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
         
         /* Quiz Area */
         .quiz-area {
@@ -99,97 +96,130 @@ body {
             min-height: 80px;
         }
         
-        /* --- OPTIONS --- */
-
-/* The container for all answer options */
-.options {
-    display: grid;                        /* Uses grid layout for options */
-    gap: 15px;                            /* Adds space between each option */
-    margin-bottom: 30px;                  /* Adds space below the options */
-}
-
-/* Styles each individual answer option */
-.option {
-    background-color: #3a3f44;            /* Sets a dark background for the option */
-    padding: 15px;                        /* Adds space inside the option */
-    border-radius: 8px;                   /* Rounds the corners of the option */
-    cursor: pointer;                      /* Shows pointer cursor to indicate it's clickable */
-    transition: all 0.2s;                 /* Smoothly animates changes (like hover or selection) */
-    text-align: left;                     /* Aligns option text to the left */
-    position: relative;                   /* Allows absolute positioning of child elements */
-    padding-left: 50px;                   /* Adds space on the left for a radio/checkbox input */
-}
-
-/* Changes the background color when hovering over an option */
-.option:hover {
-    background-color: #4a4f54;            /* Slightly lighter background on hover */
-}
-
-/* Styles the option if it is marked as correct */
-.option.correct {
-    background-color: var(--correct);     /* Green background for correct answer */
-    color: white;                         /* White text for contrast */
-}
-
-/* Styles the option if it is marked as incorrect */
-.option.incorrect {
-    background-color: var(--wrong);       /* Red background for wrong answer */
-    color: white;                         /* White text for contrast */
-}
-
-/* Styles the input (radio/checkbox) inside the option */
-.option input {
-    position: absolute;                   /* Absolutely positions the input inside the option */
-    left: 15px;                           /* 15px from the left edge */
-    top: 50%;                             /* Vertically centers the input */
-    transform: translateY(-50%);          /* Adjusts for perfect vertical centering */
-}
-
-/* --- EXPLANATION --- */
-
-/* Shows explanation or feedback after answering a question */
-.explanation {
-    background-color: rgba(255,255,255,0.1); /* Semi-transparent white background for emphasis */
-    padding: 20px;                        /* Adds space inside the explanation box */
-    border-radius: 8px;                   /* Rounds the corners */
-    margin: 20px 0;                       /* Adds vertical space above and below */
-    display: none;                        /* Hidden by default; shown after answering */
-}
-
-/* --- NAVIGATION BUTTONS --- */
-
-/* Container for navigation buttons (Next, Previous, etc.) */
-.navigation {
-    display: flex;                        /* Uses flexbox for layout */
-    justify-content: space-between;       /* Spreads buttons to the edges */
-    margin-top: 30px;                     /* Adds space above the navigation */
-}
-
-/* Styles for all buttons in the quiz area */
-button {
-    background-color: var(--accent);      /* Uses the accent color for button background */
-    color: var(--bg-dark);                /* Uses the dark background color for button text */
-    border: none;                         /* Removes default border */
-    padding: 12px 25px;                   /* Adds vertical and horizontal padding */
-    border-radius: 5px;                   /* Rounds the corners */
-    font-weight: bold;                    /* Makes button text bold */
-    cursor: pointer;                      /* Shows pointer cursor on hover */
-    transition: all 0.3s;                 /* Smoothly animates changes (like hover) */
-}
-
-/* Button hover effect */
-button:hover {
-    background-color: #ff9800;            /* Changes background to a deeper orange on hover */
-    transform: scale(1.05);               /* Slightly enlarges the button on hover */
-}
-
-/* Disabled button style */
-button:disabled {
-    background-color: #cccccc;            /* Gray background when disabled */
-    cursor: not-allowed;                  /* Shows not-allowed cursor */
-    transform: none;                      /* No scaling when disabled */
-}
+        .options {
+            display: grid;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
         
+        .option {
+            background-color: #3a3f44;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: left;
+            position: relative;
+            padding-left: 50px;
+        }
+        
+        .option:hover {
+            background-color: #4a4f54;
+        }
+        
+        .option.correct {
+            background-color: var(--correct);
+            color: white;
+        }
+        
+        .option.incorrect {
+            background-color: var(--wrong);
+            color: white;
+        }
+        
+        .option input {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .explanation {
+            background-color: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            display: none;
+        }
+        
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        
+        button {
+            background-color: var(--accent);
+            color: var(--bg-dark);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        button:hover {
+            background-color: #ff9800;
+            transform: scale(1.05);
+        }
+        
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        /* Results Section */
+        .results {
+            display: none;
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .results h2 {
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+        
+        .score {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        
+        .feedback {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: left;
+        }
+        
+        .progress-bar {
+            height: 10px;
+            background-color: #3a3f44;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 100%;
+            background-color: var(--accent);
+            width: 0%;
+            transition: width 0.3s;
+        }
+        
+        @media (max-width: 768px) {
+            .category-selection {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+            
+            .question {
+                font-size: 1.2rem;
+            }
+        }
         .navbar {
             background: #202020; /* Navbar background */
             margin-left: -20px;
