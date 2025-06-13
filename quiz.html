@@ -1,49 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Sets the page title in the browser tab. -->
     <title>Quizzer</title>
-    <!-- Sets the favicon (browser tab icon) to Logo.png. -->
     <link rel="icon" href="Logo.png">
-    <!-- Links the external CSS file for quiz page styling. -->
     <link rel="stylesheet" href="quiz.css">
-    <!-- Loads Font Awesome icons for use in category cards and feedback. -->
     <script src="https://kit.fontawesome.com/1fb7c3da32.js" crossorigin="anonymous"></script>
     <style>
-        /* (Empty, for any page-specific CSS if needed) */
+        
     </style>
 </head>
 <body>
-    <!-- Navigation bar at the top of the page -->
-    <nav class="navbar">
+     <nav class="navbar">
         <ul class="nav-list">
-            <!-- (Commented out) Logo and image for branding -->
             <!-- <li class="logo">    Quizzer
                 <img src="Logo.png" alt="Quizer Logo" style="width: 80px; height: 60px;">
-            </li> -->
-            <!-- Navigation links to other pages -->
+        </li> -->
             <li><a href="index.html">Home</a></li>
             <li><a href="quiz.html">Quiz</a></li>
             <li><a href="result.html">Result</a></li>
             <li><a href="about.html">About Us</a></li>
-            <!-- (Commented out) Search bar and icon -->
             <!-- <li id="search-li">
                 <a href="#" id="search-icon"><i class="fas fa-search"></i></a>
                 <input type="text" id="search-box" placeholder="Search...">
             </li> -->
-            <!-- Sign Up button, styled and pushed to the right -->
             <li style="position: relative; left: 150px;">
               <a href="login.html">
                 <button class="signup-btn" style="background-color: #2e3133; color: #ffb347; font-size: 1.1rem; padding: 10px 28px; border: none; border-radius: 5px; cursor: pointer; position: relative; left: -45px;">
                   Sign Up
                 </button>
               </a>
-            </li>
+            </li></a>
         </ul>
     </nav>
-    <!-- Main container for all quiz content -->
     <div class="container">
-        <!-- Header section with logo and description -->
         <header>
             <h2><i class="fas fa-brain"></i> Quizzer</h2>
             <p>Test your knowledge across various categories</p>
@@ -1144,7 +1133,7 @@
         
         restartButton.addEventListener('click', () => {
             categorySelection.style.display = 'grid';
-            quizArea.style.display = 'none';again
+            quizArea.style.display = 'none';
             resultsArea.style.display = 'none';
         });
 
