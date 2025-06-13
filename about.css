@@ -1,0 +1,296 @@
+body {
+      background-color: #1e2328;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .navbar {
+      background: #202020;
+      margin-left: -20px;
+      padding: 25px;
+      position: relative;
+      left: 10px;
+      top: -14.9px;
+    }
+
+    .nav-list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 250px;
+      position: relative;
+      left: 149px;
+    }
+
+    .nav-list li a {
+      color: #ffb347;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      transition: color 0.2s;
+    }
+
+    .nav-list li a:hover {
+      color: #ff9800;
+    }
+
+    .logo {
+      position: relative;
+      left: -270px;
+      top: 10px;
+      font-size: 1.5rem;
+      color: #ffb347;
+      font-weight: bold;
+    }
+
+    .signup-btn {
+      background-color: #2e3133;
+      color: #ffb347;
+      font-size: 1.1rem;
+      padding: 10px 28px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      position: relative;
+      left: -45px;
+    }
+    
+    .main-content {
+      flex: 1;
+      max-width: 800px;
+      margin: 50px auto;
+      position: relative;
+        top: -70px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #ffb347;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #ffb347;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      background-color: #2e2e2e;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    button[type="submit"] {
+      background-color: #ffb347;
+      color: #1e2328;
+      font-weight: bold;
+      padding: 12px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #ff9800;
+    }
+
+    footer {
+      background-color: #202020;
+      color: #aaaaaa;
+      text-align: center;
+        padding: 20px;
+        position: relative;
+        top: -100px;
+    }
+
+    /* File: about.css
+   Location: c:\Users\aksha\OneDrive\Desktop\Internship\Task 1\about.css
+*/
+
+/* Style for the whole page */
+body {
+      background-color: #1e2328;    /* Sets a dark background color for the page */
+      color: #ffffff;               /* Sets the default text color to white */
+      font-family: Arial, sans-serif; /* Uses Arial or a sans-serif font for all text */
+      margin: 0;                    /* Removes default margin around the body */
+      padding: 0;                   /* Removes default padding around the body */
+      display: flex;                /* Uses flexbox layout for the body */
+      flex-direction: column;       /* Arranges children (content) in a column */
+      min-height: 100vh;            /* Ensures the body takes at least the full viewport height */
+      overflow: hidden;             /* Hides any overflowing content outside the body */
+}
+
+/* Style for the navigation bar */
+.navbar {
+      background: #202020;          /* Sets a dark background for the navbar */
+      margin-left: -20px;           /* Moves the navbar slightly to the left */
+      padding: 25px;                /* Adds space inside the navbar */
+      position: relative;           /* Allows positioning with left/top properties */
+      left: 10px;                   /* Moves the navbar 10px to the right */
+      top: -14.9px;                 /* Moves the navbar slightly up */
+}
+
+/* Style for the navigation list inside the navbar */
+.nav-list {
+      display: flex;                /* Uses flexbox to arrange nav items horizontally */
+      justify-content: center;      /* Centers nav items horizontally */
+      align-items: center;          /* Centers nav items vertically */
+      list-style: none;             /* Removes default bullet points from the list */
+      margin: 0;                    /* Removes default margin */
+      padding: 0;                   /* Removes default padding */
+      gap: 250px;                   /* Adds space between nav items */
+      position: relative;           /* Allows positioning with left property */
+      left: 149px;                  /* Moves the nav list to the right */
+}
+
+/* Style for links inside the navigation list */
+.nav-list li a {
+      color: #ffb347;               /* Sets link color to orange-yellow */
+      text-decoration: none;        /* Removes underline from links */
+      font-size: 1.2rem;            /* Increases font size of links */
+      font-weight: 500;             /* Makes link text semi-bold */
+      letter-spacing: 1px;          /* Adds space between letters */
+      transition: color 0.2s;       /* Smoothly transitions color on hover */
+}
+
+/* Style for navigation links when hovered */
+.nav-list li a:hover {
+      color: #ff9800;               /* Changes link color to a deeper orange on hover */
+}
+
+/* Style for the logo in the navbar */
+.logo {
+      position: relative;           /* Allows positioning with left/top */
+      left: -270px;                 /* Moves the logo to the left */
+      top: 10px;                    /* Moves the logo down */
+      font-size: 1.5rem;            /* Increases logo font size */
+      color: #ffb347;               /* Sets logo color to orange-yellow */
+      font-weight: bold;            /* Makes logo text bold */
+}
+
+/* Style for the signup button in the navbar */
+.signup-btn {
+      background-color: #2e3133;    /* Sets button background to dark gray */
+      color: #ffb347;               /* Sets button text color to orange-yellow */
+      font-size: 1.1rem;            /* Sets button font size */
+      padding: 10px 28px;           /* Adds vertical and horizontal padding */
+      border: none;                 /* Removes default border */
+      border-radius: 5px;           /* Rounds the corners of the button */
+      cursor: pointer;              /* Changes cursor to pointer on hover */
+      position: relative;           /* Allows positioning with left */
+      left: -45px;                  /* Moves the button to the left */
+}
+
+/* Style for the main content area */
+.main-content {
+      flex: 1;                      /* Allows main content to grow and fill available space */
+      max-width: 800px;             /* Limits content width to 800px */
+      margin: 50px auto;            /* Adds vertical margin and centers horizontally */
+      position: relative;           /* Allows positioning with top */
+      top: -70px;                   /* Moves content up */
+}
+
+/* Style for main headings */
+h1 {
+      font-size: 2.5rem;            /* Sets large font size for h1 */
+      color: #ffb347;               /* Sets heading color to orange-yellow */
+      margin-bottom: 20px;          /* Adds space below the heading */
+}
+
+/* Style for paragraphs */
+p {
+      font-size: 1.1rem;            /* Sets paragraph font size */
+      line-height: 1.7;             /* Increases line spacing for readability */
+      margin-bottom: 20px;          /* Adds space below each paragraph */
+}
+
+/* Style for secondary headings */
+h2 {
+      color: #ffb347;               /* Sets h2 color to orange-yellow */
+      margin-top: 40px;             /* Adds space above the heading */
+      margin-bottom: 15px;          /* Adds space below the heading */
+}
+
+/* Style for forms */
+form {
+      display: flex;                /* Uses flexbox for form layout */
+      flex-direction: column;       /* Arranges form elements in a column */
+      gap: 15px;                    /* Adds space between form elements */
+      margin-top: 10px;             /* Adds space above the form */
+}
+
+/* Style for input fields and textareas */
+input, textarea {
+      padding: 12px;                /* Adds padding inside fields */
+      border: none;                 /* Removes default border */
+      border-radius: 5px;           /* Rounds the corners */
+      background-color: #2e2e2e;    /* Sets dark background for fields */
+      color: #fff;                  /* Sets text color to white */
+      font-size: 1rem;              /* Sets font size */
+}
+
+/* Additional style for textarea */
+textarea {
+      resize: vertical;             /* Allows vertical resizing only */
+      min-height: 100px;            /* Sets minimum height */
+}
+
+/* Style for submit button in forms */
+button[type="submit"] {
+      background-color: #ffb347;    /* Sets button background to orange-yellow */
+      color: #1e2328;               /* Sets button text color to dark */
+      font-weight: bold;            /* Makes button text bold */
+      padding: 12px;                /* Adds padding */
+      font-size: 1rem;              /* Sets font size */
+      border: none;                 /* Removes border */
+      border-radius: 5px;           /* Rounds the corners */
+      cursor: pointer;              /* Shows pointer cursor on hover */
+}
+
+/* Style for submit button on hover */
+button[type="submit"]:hover {
+      background-color: #ff9800;    /* Changes background to deeper orange on hover */
+}
+
+/* Style for the footer */
+footer {
+      background-color: #202020;    /* Sets dark background for footer */
+      color: #aaaaaa;               /* Sets footer text color to light gray */
+      text-align: center;           /* Centers the text */
+      padding: 20px;                /* Adds padding inside the footer */
+      position: relative;           /* Allows positioning with top */
+      top: -100px;                  /* Moves the footer up */
+}

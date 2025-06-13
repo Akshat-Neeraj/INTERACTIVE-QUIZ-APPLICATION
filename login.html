@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!-- Declares the document type as HTML5 for modern browser rendering. -->
+
+<html>
+<head>
+    <title>Quizer- Login</title>
+    <!-- Sets the browser tab title. -->
+    <link rel="stylesheet" href="login.css">
+    <!-- Loads the custom CSS file for all login page styling. -->
+    <link rel="icon" href="Logo.png">
+    <!-- Sets the favicon (browser tab icon) to Logo.png. -->
+</head>
+<body>
+    <!-- Main container for all forms, styled and centered by CSS -->
+    <div class="container" id="form-container">
+        <!-- Login Form (visible by default) -->
+        <form id="login-form">
+            <h2>Login</h2>
+            <div class="message" id="login-message"></div>
+            <!-- Area to display login messages (success, error, etc.) -->
+            <div class="form-group">
+                <label for="login-email">Email</label>
+                <input type="email" id="login-email" required>
+                <!-- Email input, required for login -->
+            </div>
+            <div class="form-group">
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" required>
+                <!-- Password input, required for login -->
+                <span class="toggle-password" onclick="togglePassword('login-password')">Show Password</span>
+                <!-- Clickable text to toggle password visibility -->
+            </div>
+            <button class="btn" type="submit" style="position: relative; left: 10px;">Login</button>
+            <!-- Login button -->
+            <div class="links">
+                <a href="#" id="show-forgot">Forgot Password?</a>
+                <!-- Link to show forgot password form -->
+                <a href="#" id="show-signup">Sign Up</a>
+                <!-- Link to show signup form -->
+            </div>
+        </form>
+        <!-- Sign Up Form (hidden by default) -->
+        <form id="signup-form" style="display:none;">
+            <h2>Sign Up</h2>
+            <div class="message" id="signup-message"></div>
+            <!-- Area to display signup messages -->
+            <div class="form-group">
+                <label for="signup-email">Email</label>
+                <input type="email" id="signup-email" required>
+                <!-- Email input for signup -->
+            </div>
+            <div class="form-group">
+                <label for="signup-username">Username</label>
+                <input type="text" id="signup-username" required>
+                <!-- Username input for signup -->
+            </div>
+            <div class="form-group">
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" required>
+                <!-- Password input for signup -->
+                <span class="toggle-password" onclick="togglePassword('signup-password')">Show Password</span>
+                <!-- Clickable text to toggle password visibility -->
+            </div>
+            <button class="btn" type="submit" style="position: relative; left: 10px;">Create Account</button>
+            <!-- Sign up button -->
+            <div class="toggle-form">
+                Already have an account? <a id="show-login" href="#">Login</a>
+                <!-- Link to switch back to login form -->
+            </div>
+        </form>
+        <!-- Forgot Password Form (hidden by default) -->
+        <form id="forgot-form" style="display:none;">
+            <h2>Forgot Password</h2>
+            <div class="message" id="forgot-message"></div>
+            <!-- Area to display forgot password messages -->
+            <div class="form-group">
+                <label for="forgot-email">Email</label>
+                <input type="email" id="forgot-email" required>
+                <!-- Email input for password reset -->
+            </div>
+            <button class="btn" type="submit" style="position: relative; left: 10px;">Reset Password</button>
+            <!-- Reset password button -->
+            <div class="toggle-form">
+                Remembered? <a id="show-login2" href="#">Login</a>
+                <!-- Link to switch back to login form -->
+            </div>
+        </form>
+    </div>
+    <!-- JavaScript for form switching, submission handling, and password toggling -->
+    <script>
+        // Get references to all forms
+        const loginForm = document.getElementById('login-form');
+        const signupForm = document.getElementById('signup-form');
+        const forgotForm = document.getElementById('forgot-form');
+
+        // Show signup form, hide others
+        document.getElementById('show-signup').onclick = e => {
+            e.preventDefault();
+            loginForm.style.display = 'none';
+            signupForm.style.display = 'block';
+            forgotForm.style.display = 'none';
+        };
+        // Show login form (from signup)
+        document.getElementById('show-login').onclick = e => {
+            e.preventDefault();
+            loginForm.style.display = 'block';
+            signupForm.style.display = 'none';
+            forgotForm.style.display = 'none';
+        };
+        // Show login form (from forgot password)
+        document.getElementById('show-login2').onclick = e => {
+            e.preventDefault();
+            loginForm.style.display = 'block';
+            signupForm.style.display = 'none';
+            forgotForm.style.display = 'none';
+        };
+        // Show forgot password form
+        document.getElementById('show-forgot').onclick = e => {
+            e.preventDefault();
+            loginForm.style.display = 'none';
+            signupForm.style.display = 'none';
+            forgotForm.style.display = 'block';
+        };
+
+        // Login form handler
+        loginForm.onsubmit = function(e) {
+            e.preventDefault();
+            document.getElementById('login-message').textContent = "Logged in successfully";
+            // Simulate login and redirect after 1 second
+            setTimeout(function() {
+                window.location.href = "index.html";
+            }, 1000);
+        };
+
+        // Sign Up form handler with redirect
+        signupForm.onsubmit = function(e) {
+            e.preventDefault();
+            document.getElementById('signup-message').textContent = "Account created";
+            // After account creation, switch to login form after 1 second
+            setTimeout(function() {
+                signupForm.style.display = 'none';
+                loginForm.style.display = 'block';
+                document.getElementById('login-message').textContent = "Account created. Please log in.";
+            }, 1000);
+        };
+
+        // Forgot Password form handler
+        forgotForm.onsubmit = function(e) {
+            e.preventDefault();
+            document.getElementById('forgot-message').textContent = "Password reset link sent";
+        };
+
+        // Toggle password visibility for any password field
+        function togglePassword(fieldId) {
+            const field = document.getElementById(fieldId);
+            const toggleText = field.nextElementSibling;
+            if (field.type === "password") {
+                field.type = "text";
+                toggleText.textContent = "Hide Password";
+            } else {
+                field.type = "password";
+                toggleText.textContent = "Show Password";
+            }
+        }
+    </script>
+</body>
+</html>

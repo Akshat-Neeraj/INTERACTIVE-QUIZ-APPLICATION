@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz History - Quizzer</title>
+  <link rel="stylesheet" href="result.css">
+  <link rel="icon" href="Logo.png">
+  <style>
+    /* (Empty, for any page-specific CSS if needed) */
+  </style>
+</head>
+<body>
+<!-- Navigation bar at the top of the page -->
+<nav class="navbar">
+    <ul class="nav-list">
+        <!-- (Commented out) Logo and image for branding -->
+        <!-- <li class="logo">    Quizzer
+            <img src="Logo.png" alt="Quizer Logo" style="width: 80px; height: 60px;">
+        </li> -->
+        <!-- Navigation links to other pages -->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="result.html">Result</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <!-- (Commented out) Search bar and icon -->
+        <!-- <li id="search-li">
+            <a href="#" id="search-icon"><i class="fas fa-search"></i></a>
+            <input type="text" id="search-box" placeholder="Search...">
+        </li> -->
+        <!-- Sign Up button, styled and pushed to the right -->
+        <li style="position: relative; left: 150px;">
+          <a href="login.html">
+            <button class="signup-btn" style="background-color: #2e3133;
+             color: #ffb347; 
+             font-size: 1.1rem; 
+             padding: 10px 28px; 
+             border: none;
+              border-radius: 5px; 
+              cursor: pointer; 
+              position: relative; 
+              left: -45px;">
+              Sign Up
+            </button>
+          </a>
+        </li>
+    </ul>
+</nav>
+
+<!-- Main heading for the result/history page -->
+<h1>Result</h1>
+
+<!-- Container for the quiz history table and controls -->
+<div class="history-container">
+  <!-- Table displaying quiz history -->
+  <table id="history-table">
+    <thead>
+      <tr>
+        <th>#</th>           <!-- Serial number column -->
+        <th>Category</th>    <!-- Quiz category column -->
+        <th>Score</th>       <!-- Score column -->
+        <th>Date</th>        <!-- Date column -->
+      </tr>
+    </thead>
+    <tbody id="history-body">
+      <!-- Table rows are filled via JavaScript -->
+    </tbody>
+  </table>
+
+  <!-- Message shown if there is no quiz history -->
+  <p id="no-history" class="no-data" style="display: none;">No quiz history found.</p>
+
+  <!-- Button to clear quiz history -->
+  <button class="clear-btn" onclick="clearHistory()">Clear History</button>
+</div>
+
+<!-- JavaScript for loading and clearing quiz history -->
+<script>
+  // Loads quiz history from localStorage and displays it in the table
+  function loadHistory() {
+    const historyBody = document.getElementById('history-body');
+    const noHistory = document.getElementById('no-history');
+    const history = JSON.parse(localStorage.getItem('quizHistory')) || [];
+
+    // If no history, show the "no data" message and hide the table
+    if (history.length === 0) {
+      noHistory.style.display = 'block';
+      document.getElementById('history-table').style.display = 'none';
+      return;
+    }
+
+    // For each history entry, create a table row and fill in the data
+    history.forEach((entry, index) => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${index + 1}</td>
+        <td>${entry.category}</td>
+        <td>${entry.score}/${entry.total}</td>
+        <td>${entry.date}</td>
+      `;
+      historyBody.appendChild(row);
+    });
+  }
+
+  // Clears the quiz history from localStorage and reloads the page
+  function clearHistory() {
+    if (confirm('Are you sure you want to clear your quiz history?')) {
+      localStorage.removeItem('quizHistory');
+      location.reload();
+    }
+  }
+
+  // Load the quiz history when the page loads
+  loadHistory();
+</script>
+</body>
+<!-- Footer at the bottom of the page -->
+<footer class="footer">
+  &copy; 2025 Quizzer. All rights reserved.
+</footer>
+</html>
