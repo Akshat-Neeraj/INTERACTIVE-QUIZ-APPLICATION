@@ -1,90 +1,45 @@
 <!DOCTYPE html>
-<!-- Declares the document type and version of HTML being used (HTML5). This helps browsers render the page correctly. -->
-
 <html>
 <head>
   <title>About Us - Quizzer</title>
-  <!-- Sets the title of the page, which appears in the browser tab. -->
-
   <link rel="stylesheet" href="about.css">
-  <!-- Links the external CSS file (about.css) for styling this page. All visual styles are controlled from there. -->
-
   <link rel="icon" href="Logo.png">   
-  <!-- Sets the favicon (the small icon in the browser tab) using Logo.png. -->
-
   <style>
     
   </style>
 </head>
 <body>
-  <!-- The main content of the page starts here. Everything inside <body> is visible to the user. -->
 
-  <!-- Navigation Bar -->
   <nav class="navbar">
-    <!-- The navigation bar uses the 'navbar' class for styling. -->
     <ul class="nav-list">
-      <!-- Unordered list for navigation links, styled with 'nav-list' class. -->
       <li><a href="index.html">Home</a></li>
-      <!-- Link to the Home page. -->
       <li><a href="quiz.html">Quiz</a></li>
-      <!-- Link to the Quiz page. -->
       <li><a href="result.html">Result</a></li>
-      <!-- Link to the Result page. -->
       <li><a href="about.html">About Us</a></li>
-      <!-- Link to the About Us page (current page). -->
       <li style="position: relative; left: 150px;">
-        <!-- This list item is pushed to the right for layout purposes. -->
         <a href="login.html">
-          <!-- Link to the login/signup page. -->
           <button class="signup-btn">Sign Up</button>
-          <!-- Button styled with 'signup-btn' class for sign up. -->
         </a>
       </li>
     </ul>
   </nav>
 
-  <!-- Main Content Section -->
   <div class="main-content">
-    <!-- Container for the main content, styled with 'main-content' class. -->
-
     <h1>About Quizzer</h1>
-    <!-- Main heading for the page. -->
-
-    <p>
-      <!-- First paragraph: Introduction to Quizzer. -->
-      Welcome to Quizzer, your go-to destination for interactive quizzes! Whether you're here to test your knowledge, prepare for a competitive exam, or just have fun, Quizzer brings you a wide variety of quizzes on topics ranging from science and history to pop culture and technology.
-    </p>
-
-    <p>
-      <!-- Second paragraph: Explains the platform's purpose and audience. -->
-      Quizzer is a dynamic and interactive quiz platform designed to make learning fun, accessible, and effective. Whether you're a student sharpening your knowledge, a teacher creating engaging assessments, or just someone who loves a good trivia challenge — Quizzer has something for everyone.
-    </p>
-
-    <p>
-      <!-- Third paragraph: Describes the mission and ongoing improvements. -->
-      Our mission is to make learning fun, accessible, and rewarding for everyone. We're constantly updating our questions and features to give you the best learning experience possible.
-    </p>
+    <p>Welcome to Quizzer, your go-to destination for interactive quizzes! Whether you're here to test your knowledge, prepare for a competitive exam, or just have fun, Quizzer brings you a wide variety of quizzes on topics ranging from science and history to pop culture and technology.</p>
+    <p>Quizzer is a dynamic and interactive quiz platform designed to make learning fun, accessible, and effective. Whether you're a student sharpening your knowledge, a teacher creating engaging assessments, or just someone who loves a good trivia challenge — Quizzer has something for everyone.</p>
+    <p>Our mission is to make learning fun, accessible, and rewarding for everyone. We're constantly updating our questions and features to give you the best learning experience possible.</p>
 
     <h2>Contact Us</h2>
-    <!-- Subheading for the contact form section. -->
-
     <form action="https://formspree.io/f/xovwvvjj" method="POST">
-      <!-- Contact form that sends data to Formspree for handling submissions. -->
       <input type="text" name="name" placeholder="Your Name" required />
-      <!-- Text input for user's name, required field. -->
       <input type="email" name="email" placeholder="Your Email" required />
-      <!-- Email input for user's email, required field. -->
       <textarea name="message" placeholder="Your Message" required></textarea>
-      <!-- Textarea for user's message, required field. -->
       <button type="submit">Send Message</button>
-      <!-- Submit button for the form. -->
     </form>
   </div>
-
-  <!-- Footer Section -->
   <footer>
     &copy; 2025 Quizzer. All rights reserved.
-    <!-- Copyright notice -->
   </footer>
 
 </body>
