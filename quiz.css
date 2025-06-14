@@ -1,4 +1,4 @@
- body {
+       body {
             background-color: #1e2328; 
             margin: 0;
             padding: 0;
@@ -24,7 +24,7 @@
         .container {
          width: 800px;
         margin: 0 auto;
-        height: calc(100vh - 160px); 
+        height: calc(100vh - 160px); /* Adjust for nav + footer height */
         overflow-y: auto;
         padding-bottom: 30px;
       }
@@ -43,8 +43,8 @@
             color: var(--accent);
             margin-bottom: 10px;
         }
-
-
+        
+        /* Category Selection */
         .category-selection {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -221,7 +221,7 @@
             }
         }
         .navbar {
-            background: #202020; 
+            background: #202020; /* Navbar background */
             margin-left: -20px;
             padding: 25px;
             position: relative;
