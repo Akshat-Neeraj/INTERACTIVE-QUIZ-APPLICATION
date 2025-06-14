@@ -1,160 +1,133 @@
-/* File: index.css
-   Location: c:\Users\aksha\OneDrive\Desktop\Internship\Task 1\index.css
-   This file contains all the styles for the main (home) page of the Quizzer application.
-*/
-
-/* Style for the entire page body */
 body {
-    background-color: #1e2328; /* Sets a dark background color for the page */
-    margin: 0;                 /* Removes default margin around the body */
-    padding: 0;                /* Removes default padding around the body */
-    overflow: hidden;          /* Prevents scrollbars by hiding overflow content */
-}
+            background-color: #1e2328; 
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
 
-/* Style for the navigation bar at the top */
-.navbar {
-    background: #202020;       /* Sets a dark background for the navbar */
-    margin-left: -20px;        /* Moves the navbar slightly to the left */
-    padding: 25px;             /* Adds space inside the navbar */
-    position: relative;        /* Allows positioning with left property */
-    left: 10px;                /* Moves the navbar 10px to the right */
-}
+        .navbar {
+            background: #202020;
+            margin-left: -20px;
+            padding: 25px;
+            position: relative;
+            left: 10px;
+        }
 
-/* Style for the navigation list inside the navbar */
-.nav-list {
-    display: flex;             /* Uses flexbox to arrange nav items horizontally */
-    justify-content: center;   /* Centers nav items horizontally */
-    align-items: center;       /* Centers nav items vertically */
-    list-style: none;          /* Removes default bullet points from the list */
-    margin: 0;                 /* Removes default margin */
-    padding: 0;                /* Removes default padding */
-    gap: 250px;                /* Adds space between nav items */
-    position: relative;        /* Allows positioning with right property */
-    right: -420px;             /* Moves the nav list to the right */
-}
+        .nav-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 250px;
+            position: relative;
+            right: -420px;
+        }
 
-/* Style for navigation links */
-.nav-list li a {
-    color: #ffb347;            /* Sets link color to orange-yellow */
-    text-decoration: none;     /* Removes underline from links */
-    font-size: 1.2rem;         /* Increases font size of links */
-    font-weight: 500;          /* Makes link text semi-bold */
-    letter-spacing: 1px;       /* Adds space between letters */
-    transition: color 0.2s;    /* Smoothly transitions color on hover */
-}
+        .nav-list li a {
+            color: #ffb347;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+        }
 
-/* Style for navigation links on hover */
-.nav-list li a:hover {
-    color: #ff9800;            /* Changes link color to a deeper orange on hover */
-}
+        .nav-list li a:hover {
+            color: #ff9800;
+        }
+        .logo{
+            position: relative;
+            left: -270px;
+            top: 10px;
+            font-size: 1.5rem;
+            color: #ffb347;
+            font-weight: bold;
+        }
+        #search-box {
+            display: none;
+            margin-left: 10px;
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
 
-/* Style for the logo in the navbar */
-.logo {
-    position: relative;        /* Allows positioning with left/top */
-    left: -270px;              /* Moves the logo to the left */
-    top: 10px;                 /* Moves the logo down */
-    font-size: 1.5rem;         /* Increases logo font size */
-    color: #ffb347;            /* Sets logo color to orange-yellow */
-    font-weight: bold;         /* Makes logo text bold */
-}
-
-/* Style for the search box (hidden by default) */
-#search-box {
-    display: none;             /* Hides the search box initially */
-    margin-left: 10px;         /* Adds space to the left of the search box */
-    padding: 5px;              /* Adds padding inside the search box */
-    border-radius: 4px;        /* Rounds the corners of the search box */
-    border: 1px solid #ccc;    /* Adds a light gray border */
-}
-
-/* Style for the search list item in the navbar */
-#search-li {
-    display: flex;             /* Uses flexbox for alignment */
-    align-items: center;       /* Vertically centers the content */
-    position: relative;        /* Allows positioning with left */
-    left: 120px;               /* Moves the search item to the right */
-}
-
-/* Grid layout for quiz categories */
-.categories-grid {
-    display: grid;                         /* Uses CSS grid for layout */
+        #search-li {
+            display: flex;
+            align-items: center;
+            position: relative;
+            left: 120px;
+        }
+        .categories-grid {
+    display: grid;
     grid-template-columns: repeat(3, 1fr); /* Forces exactly 3 columns */
-    gap: 30px;                             /* Adds space between grid items */
-    max-width: 1200px;                     /* Limits grid width */
-    margin: 0 auto;                        /* Centers the grid horizontally */
-    padding: 20px;                         /* Adds padding around the grid */
-}
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    }
 
-/* Style for each category card in the grid */
+
 .category-card {
-    background: #2e3133;                   /* Sets card background to dark gray */
-    border-radius: 12px;                   /* Rounds the corners of the card */
-    padding: 40px 20px;                    /* Adds vertical and horizontal padding */
-    text-align: center;                    /* Centers text inside the card */
-    transition: all 0.3s ease;             /* Smooth transition for hover effects */
-    min-height: 200px;                     /* Sets minimum height for cards */
-    display: flex;                         /* Uses flexbox for card content */
-    flex-direction: column;                /* Arranges content vertically */
-    align-items: center;                   /* Centers content horizontally */
-    justify-content: center;               /* Centers content vertically */
+    background: #2e3133;
+    border-radius: 12px;
+    padding: 40px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Hover effect for category cards */
 .category-card:hover {
-    transform: scale(1.03);                /* Slightly enlarges the card */
-    box-shadow: 0 10px 25px rgba(255, 179, 71, 0.2); /* Adds a soft orange shadow */
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(255, 179, 71, 0.2);
 }
 
-/* Style for the icon inside each category card */
 .category-icon {
-    font-size: 3.5rem;                     /* Makes the icon large */
-    color: #ffb347;                        /* Sets icon color to orange-yellow */
-    margin-bottom: 20px;                   /* Adds space below the icon */
+    font-size: 3.5rem;
+    color: #ffb347;
+    margin-bottom: 20px;
 }
 
-/* Style for the category name/title */
 .category-card h3 {
-    font-size: 1.5rem;                     /* Sets font size for category name */
-    margin: 0 0 10px 0;                    /* Adds space below the heading */
-    color: white;                          /* Sets text color to white */
+    font-size: 1.5rem;
+    margin: 0 0 10px 0;
+    color: white;
 }
-
-/* Removes underline from links inside the grid */
 .categories-grid a {
     text-decoration: none;
 }
 
-/* Style for the number of questions in each category */
 .category-count {
-    font-size: 1rem;                       /* Sets font size */
-    color: #aaa;                           /* Sets text color to light gray */
-    margin: 0;                             /* Removes default margin */
+    font-size: 1rem;
+    color: #aaa;
+    margin: 0;
 }
-
-/* Responsive adjustment for tablets (commented out) */
 
 @media (max-width: 900px) {
     .categories-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-}
+} 
 
-
-/* Mobile adjustment (commented out) */
-@media (max-width: 600px) {
+ @media (max-width: 600px) {
     .categories-grid {
         grid-template-columns: 1fr;
     }
 }
 
-/* Style for the footer at the bottom of the page */
-footer {
-    text-align: center;                    /* Centers the text */
-    padding: 20px;                         /* Adds padding inside the footer */
-    background-color: #202020;             /* Sets dark background for footer */
-    color: #ffb347;                        /* Sets footer text color to orange-yellow */
-    position: absolute;                    /* Positions the footer absolutely */
-    left: 0;                               /* Aligns footer to the left edge */
-    width: 100%;                           /* Makes footer span the full width */
-    bottom: 0;                             /* Positions the footer at the bottom */
-}
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #202020;
+            color: #ffb347;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            bottom: 0;
+            
+        }
