@@ -1,149 +1,114 @@
-/* File: login.css
-   Location: c:\Users\aksha\OneDrive\Desktop\Internship\Task 1\login.css
-   This file contains all the styles for the login and signup forms of the Quizzer application.
-*/
-
-/* Style for the entire page body */
 body {
-            background: url('download.jpg') no-repeat center center fixed; /* Sets a background image, centers it, and fixes it during scroll */
-            background-size: cover;           /* Ensures the background image covers the entire viewport */
-            color: #f1f1f1;                   /* Sets the default text color to a light gray */
-            font-family: 'Segoe UI', Arial, sans-serif; /* Uses Segoe UI or Arial for all text */
-            margin: 0;                        /* Removes default margin */
-            min-height: 100vh;                /* Ensures the body takes at least the full viewport height */
-            display: flex;                    /* Uses flexbox layout for the body */
-            align-items: center;              /* Vertically centers the content */
-            justify-content: center;          /* Horizontally centers the content */
-            overflow: hidden;                 /* Prevents scrollbars by hiding overflow content */
+            background: url('download.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #f1f1f1;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
         }
-
-/* Container for the login/signup form */
-.container {
-            background: #2d323c;              /* Sets a dark background for the form container */
-            padding: 2.5rem 2rem;             /* Adds vertical and horizontal padding */
-            border-radius: 12px;              /* Rounds the corners of the container */
-            box-shadow: 0 4px 24px rgba(0,0,0,0.4); /* Adds a soft shadow for depth */
-            width: 100vw;                     /* Makes the container span the full viewport width */
-            height: 100vh;                    /* Makes the container span the full viewport height */
-            max-width: 100vw;                 /* Prevents the container from exceeding viewport width */
-            max-height: 100vh;                /* Prevents the container from exceeding viewport height */
-            display: flex;                    /* Uses flexbox for inner alignment */
-            align-items: center;              /* Vertically centers the form inside the container */
-            justify-content: center;          /* Horizontally centers the form inside the container */
+        .container {
+            background: #2d323c;
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+            width: 100vw;
+            height: 100vh;
+            max-width: 100vw;
+            max-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-
-/* Style for the form inside the container */
-.container form {
-            width: 350px;                     /* Sets a fixed width for the form */
-            margin: auto;                     /* Centers the form horizontally */
+        .container form {
+            width: 350px;
+            margin: auto;
         }
-
-/* Style for the form heading */
-.container h2 {
-            text-align: center;               /* Centers the heading text */
-            margin-bottom: 1.5rem;            /* Adds space below the heading */
-            color: #ffb347;                   /* Sets heading color to orange-yellow */
-            letter-spacing: 1px;              /* Adds space between letters */
+        .container h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #ffb347;
+            letter-spacing: 1px;
         }
-
-/* Style for each form group (label + input) */
-.form-group {
-            margin-bottom: 1.2rem;            /* Adds space below each group */
+        .form-group {
+            margin-bottom: 1.2rem;
         }
-
-/* Style for labels above inputs */
-label {
-            display: block;                   /* Makes label take full width */
-            margin-bottom: 0.4rem;            /* Adds space below the label */
-            color: #bfc4cc;                   /* Sets label color to light gray */
+        label {
+            display: block;
+            margin-bottom: 0.4rem;
+            color: #bfc4cc;
         }
-
-/* Style for input fields */
-input[type="email"], input[type="password"], input[type="text"] {
-            width: 100%;                      /* Makes input fields span the full width */
-            padding: 0.7rem;                  /* Adds padding inside the input */
-            border: none;                     /* Removes default border */
-            border-radius: 6px;               /* Rounds the corners of the input */
-            background: #23272f;              /* Sets a dark background for the input */
-            color: #f1f1f1;                   /* Sets input text color to light gray */
-            font-size: 1rem;                  /* Sets font size */
-            margin-bottom: 0.2rem;            /* Adds a small space below the input */
+        input[type="email"], input[type="password"], input[type="text"] {
+            width: 100%;
+            padding: 0.7rem;
+            border: none;
+            border-radius: 6px;
+            background: #23272f;
+            color: #f1f1f1;
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
         }
-
-/* Highlight input fields when focused */
-input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus {
-            outline: 2px solid #ffb347;       /* Adds an orange outline when the input is focused */
+        input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus {
+            outline: 2px solid #ffb347;
         }
-
-/* Style for the main button (login/signup) */
-.btn {
-            width: 100%;                      /* Makes the button span the full width */
-            padding: 0.8rem;                  /* Adds padding inside the button */
-            background: #ffb347;              /* Sets button background to orange-yellow */
-            color: #23272f;                   /* Sets button text color to dark */
-            border: none;                     /* Removes default border */
-            border-radius: 6px;               /* Rounds the corners of the button */
-            font-size: 1rem;                  /* Sets font size */
-            font-weight: bold;                /* Makes button text bold */
-            cursor: pointer;                  /* Shows pointer cursor on hover */
-            margin-top: 0.5rem;               /* Adds space above the button */
-            transition: background 0.2s;      /* Smoothly transitions background color on hover */
+        .btn {
+            width: 100%;
+            padding: 0.8rem;
+            background: #ffb347;
+            color: #23272f;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 0.5rem;
+            transition: background 0.2s;
         }
-
-/* Button hover effect */
-.btn:hover {
-            background: #ffa500;              /* Changes background to a deeper orange on hover */
+        .btn:hover {
+            background: #ffa500;
         }
-
-/* Style for the links below the button (forgot password, etc.) */
-.links {
-            display: flex;                    /* Uses flexbox for alignment */
-            justify-content: space-between;   /* Spreads links to opposite ends */
-            margin-top: 1rem;                 /* Adds space above the links */
+        .links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
         }
-
-/* Style for each link */
-.links a {
-            color: #bfc4cc;                   /* Sets link color to light gray */
-            text-decoration: none;            /* Removes underline from links */
-            font-size: 0.95rem;               /* Sets font size */
-            transition: color 0.2s;           /* Smoothly transitions color on hover */
+        .links a {
+            color: #bfc4cc;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
         }
-
-/* Link hover effect */
-.links a:hover {
-            color: #ffb347;                   /* Changes link color to orange-yellow on hover */
+        .links a:hover {
+            color: #ffb347;
         }
-
-/* Style for the toggle form link (switch between login/signup) */
-.toggle-form {
-            text-align: center;               /* Centers the toggle link */
-            margin-top: 1.2rem;               /* Adds space above the toggle link */
+        .toggle-form {
+            text-align: center;
+            margin-top: 1.2rem;
         }
-.toggle-form a {
-            color: #ffb347;                   /* Sets link color to orange-yellow */
-            cursor: pointer;                  /* Shows pointer cursor on hover */
-            text-decoration: underline;       /* Underlines the link */
+        .toggle-form a {
+            color: #ffb347;
+            cursor: pointer;
+            text-decoration: underline;
         }
-
-/* Style for messages (like error or success) */
-.message {
-            text-align: center;               /* Centers the message */
-            margin-bottom: 1rem;              /* Adds space below the message */
-            color: #ffb347;                   /* Sets message color to orange-yellow */
-            font-size: 1rem;                  /* Sets font size */
+        .message {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #ffb347;
+            font-size: 1rem;
         }
-
-/* Style for the show/hide password toggle icon */
-.toggle-password {
-            cursor: pointer;                  /* Shows pointer cursor on hover */
-            font-size: 15px;                  /* Sets icon size */
-            color: #ffb347;                   /* Sets icon color to orange-yellow */
-            margin-top: -0.6rem;              /* Moves icon up slightly */
-            margin-bottom: 0.8rem;            /* Adds space below the icon */
-            display: block;                   /* Makes icon take full width */
-            text-align: right;                /* Aligns icon to the right */
-            position: relative;               /* Allows positioning with top/left */
-            top: 15px;                        /* Moves icon down */
-            left: -245px;                     /* Moves icon to the left */
-}
+        /* Added: Show/hide toggle style */
+        .toggle-password {
+            cursor: pointer;
+            font-size: 15px;
+            color: #ffb347;
+            margin-top: -0.6rem;
+            margin-bottom: 0.8rem;
+            display: block;
+            text-align: right;
+            position: relative;
+            top: 15px;
+            left: -245px;
+        }
