@@ -1,127 +1,113 @@
-/* File: result.css
-   Location: c:\Users\aksha\OneDrive\Desktop\Internship\Task 1\result.css
-   This file styles the quiz result/history page for the Quizzer application.
-*/
-
-/* --- PAGE BACKGROUND --- */
 body {
-    background-color: #1e2328; /* Sets a dark background for the page */
-    margin: 0;                 /* Removes default margin */
-    padding: 0;                /* Removes default padding */
-    overflow: hidden;          /* Prevents scrollbars by hiding overflow content */
-}
+            background-color: #1e2328; /* Body background */
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    h1 {
+      color: #ffb347;
+      text-align: center;
+    }
+    .history-container {
+      margin: 30px auto;
+      max-width: 800px;
+      background: #2e3133;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #f8f9fa;
+    }
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #444;
+    }
+    th {
+      background-color: #3a3f44;
+    }
+    .no-data {
+      text-align: center;
+      color: #ccc;
+      margin-top: 20px;
+    }
+    .clear-btn {
+      background-color: #ff4d4d;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      margin-top: 20px;
+      display: block;
+      margin-left: auto;
+    }
+        .navbar {
+            background: #202020; 
+            margin-left: -20px;
+            padding: 25px;
+            position: relative;
+            left: 10px;
+            top: -14.9px;
+        }
 
-/* --- MAIN HEADING --- */
-h1 {
-    color: #ffb347;            /* Sets heading color to orange-yellow */
-    text-align: center;        /* Centers the heading text */
-}
+        .nav-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 250px;
+            position: relative;
+            left: 149px;
+        }
 
-/* --- HISTORY CONTAINER --- */
-.history-container {
-    margin: 30px auto;         /* Adds vertical margin and centers horizontally */
-    max-width: 800px;          /* Limits container width */
-    background: #2e3133;       /* Sets a dark background for the container */
-    padding: 20px;             /* Adds space inside the container */
-    border-radius: 10px;       /* Rounds the corners */
-}
+        .nav-list li a {
+            color: #ffb347;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+        }
 
-/* --- TABLE STYLING --- */
-table {
-    width: 100%;               /* Makes table span the full container width */
-    border-collapse: collapse; /* Removes space between table cells */
-    color: #f8f9fa;            /* Sets table text color to light gray */
-}
-th, td {
-    padding: 12px;             /* Adds space inside table cells */
-    text-align: center;        /* Centers text in table cells */
-    border-bottom: 1px solid #444; /* Adds a dark border below each row */
-}
-th {
-    background-color: #3a3f44; /* Sets a slightly lighter background for header cells */
-}
+        .nav-list li a:hover {
+            color: #ff9800;
+        }
+        .logo{
+            position: relative;
+            left: -270px;
+            top: 10px;
+            font-size: 1.5rem;
+            color: #ffb347;
+            font-weight: bold;
+        }
+        #search-box {
+            display: none;
+            margin-left: 10px;
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
 
-/* --- NO DATA MESSAGE --- */
-.no-data {
-    text-align: center;        /* Centers the text */
-    color: #ccc;               /* Light gray color for the message */
-    margin-top: 20px;          /* Adds space above the message */
-}
-
-/* --- CLEAR HISTORY BUTTON --- */
-.clear-btn {
-    background-color: #ff4d4d; /* Red background for the clear button */
-    border: none;              /* Removes default border */
-    padding: 10px 20px;        /* Adds vertical and horizontal padding */
-    border-radius: 5px;        /* Rounds the corners */
-    color: white;              /* White text */
-    cursor: pointer;           /* Shows pointer cursor on hover */
-    margin-top: 20px;          /* Adds space above the button */
-    display: block;            /* Makes the button take its own line */
-    margin-left: auto;         /* Pushes the button to the right */
-}
-
-/* --- NAVIGATION BAR --- */
-.navbar {
-    background: #202020;       /* Dark background for navbar */
-    margin-left: -20px;        /* Moves navbar slightly to the left */
-    padding: 25px;             /* Adds space inside navbar */
-    position: relative;        /* Allows positioning with left/top */
-    left: 10px;                /* Moves navbar to the right */
-    top: -14.9px;              /* Moves navbar slightly up */
-}
-.nav-list {
-    display: flex;             /* Arranges nav items in a row */
-    justify-content: center;   /* Centers nav items horizontally */
-    align-items: center;       /* Centers nav items vertically */
-    list-style: none;          /* Removes bullet points */
-    margin: 0;                 /* Removes default margin */
-    padding: 0;                /* Removes default padding */
-    gap: 250px;                /* Adds space between nav items */
-    position: relative;        /* Allows positioning with left */
-    left: 149px;               /* Moves nav list to the right */
-}
-.nav-list li a {
-    color: #ffb347;            /* Orange-yellow link color */
-    text-decoration: none;     /* Removes underline */
-    font-size: 1.2rem;         /* Larger font size */
-    font-weight: 500;          /* Semi-bold text */
-    letter-spacing: 1px;       /* Spacing between letters */
-    transition: color 0.2s;    /* Smooth color transition on hover */
-}
-.nav-list li a:hover {
-    color: #ff9800;            /* Deeper orange on hover */
-}
-.logo {
-    position: relative;        /* Allows positioning */
-    left: -270px;              /* Moves logo to the left */
-    top: 10px;                 /* Moves logo down */
-    font-size: 1.5rem;         /* Larger logo font */
-    color: #ffb347;            /* Orange-yellow logo color */
-    font-weight: bold;         /* Bold logo text */
-}
-#search-box {
-    display: none;             /* Hides search box */
-    margin-left: 10px;         /* Space to the left */
-    padding: 5px;              /* Padding inside box */
-    border-radius: 4px;        /* Rounded corners */
-    border: 1px solid #ccc;    /* Light gray border */
-}
-#search-li {
-    display: flex;             /* Flexbox for alignment */
-    align-items: center;       /* Vertically centers content */
-    position: relative;        /* Allows positioning with left */
-    left: 120px;               /* Moves search item to the right */
-}
-
-/* --- FOOTER --- */
-footer {
-    text-align: center;        /* Centers footer text */
-    padding: 20px;             /* Adds space inside footer */
-    background-color: #202020; /* Dark background for footer */
-    color: #ffb347;            /* Orange-yellow text */
-    position: absolute;        /* Positions footer absolutely */
-    left: 0;                   /* Aligns to left edge */
-    width: 100%;               /* Full width */
-    bottom: 0;                 /* Sticks to bottom of page */
-}
+        #search-li {
+            display: flex;
+            align-items: center;
+            position: relative;
+            left: 120px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #202020;
+            color: #ffb347;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            bottom: 0;
+            
+        }
